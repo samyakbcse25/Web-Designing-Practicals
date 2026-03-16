@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tribute to Chhatrapati Shivaji Maharaj</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            font-family: Arial;
+        }
+        h1 {
+            color: darkred;
+            text-align: center;
+        }
+        nav {
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .box {
+            border: 2px solid maroon;
+            padding: 10px;
+            margin: 10px;
+            background-color: white;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+        }
+        img {
+            display: block;
+            margin: 10px auto 0 auto;
+            width: 120px;
+            border: 2px solid maroon;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://www.google.com">Home</a>
+        <a href="#">About</a>
+        <a href="#" onclick="alert('Contact No.: 9307005128')">Contact</a>
+    </nav>
+    <div class="box">
+        <h1>Tribute to Chhatrapati Shivaji Maharaj</h1>
+        <p>Chhatrapati Shivaji Maharaj (1630–1680) was the founder of the Maratha Empire.
+           He was a great warrior, king, and administrator who fought for Swarajya (self-rule).
+           He is a pride of Maharashtra and all of India.</p>
+        <h2>Achievements</h2>
+        <p>Founded the Maratha Empire.</p>
+        <p>Father of the Indian Navy.</p>
+        <p>Built and captured many forts.</p>
+        <p>Defeated Afzal Khan at Battle of Pratapgad.</p>
+        <img src="C:/Users/Students/Downloads/3246f81e25a026a203457bd5bcc7bddc.jpg" alt="Chhatrapati Shivaji Maharaj">
+    </div>
+</body>
+</html>
