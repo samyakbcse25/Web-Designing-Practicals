@@ -1,0 +1,48 @@
+<html>
+<title> Resume </title>
+<body background="C:\Users\DELL\Downloads\simple-yellow-pattern-abstract-background-free-vector.jpg">
+<Center>
+<h1> RESUME </h1>
+</Center>
+
+<p><br> Samyak Bhadke </p>
+<p> email : samyakb.cse25@sbjit.edu.in </p></br>
+<p>
+<img src="C:\Users\DELL\Downloads\WhatsApp Image 2026-03-09 at 12.19.04 PM.jpeg" width="150" height="185" style="float:right;">
+</p>
+<hr>
+<h2>Academic details </h2>
+<h4> B.tech from S.B. Jain </h4>
+<h4> Maharashtra , Nagpur (441302) </h4>
+<table border = "2">
+<tr>
+<th> 12th marks </th>
+<td> 76% </td>
+</tr>
+
+<tr>
+<th> Collage cgpa </th>
+<td> 8.9 </td>
+</tr>
+
+<tr>
+<th> Experience </th>
+<td> In Google for 4 years </td>
+</tr>
+</table>
+
+<h2> Technical skills </h2>
+<h3> programming  language :  </h3>
+
+<h4><li> HTML </li></h4>
+<h4><li> C++ </li></h4>
+<h4><li> Java </li></h4>
+<h4><li> Python </li></h4>
+
+<h2>Personal details : </h2>
+<h4>name : Samyak Bhadke </h4>
+<h4>phone number : 9307005128 <h4>
+<h4>location : katol , nagpur , maharashtra (441302) </h4>
+
+</body>
+</html>
