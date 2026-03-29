@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="C:/Users/Students/Documents/samyakb/download (2).jpg" width="150">
+        <img src="C:/Users/Students/Documents/samyakb/download (1).jpg" alt="Image 2">
+        <img src="C:\Users\Students\Documents\samyakb\koenigsegg.jpg" alt="Image 3">
+        <img src="C:\Users\Students\Documents\samyakb\download.jpg" alt="Image 4">
+        <img src="C:\Users\Students\Documents\samyakb\download (3).jpg" alt="Image 5">
+        <img src="C:\Users\Students\Documents\samyakb\download12.jpg" alt="Image 6">
+        <img src="C:\Users\Students\Downloads\samyakbh\download (1).jpg" alt="Image 7">
+        <img src="C:\Users\Students\Downloads\samyakbh\download (2).jpg" alt="Image 8">
+        <img src="C:\Users\Students\Downloads\samyakbh\download (3).jpg" alt="Image 9">
+        <img src="C:\Users\Students\Downloads\samyakbh\download (4).jpg" alt="Image 10">
+        <img src="C:\Users\Students\Downloads\samyakbh\download (5).jpg" alt="Image 11">
+        <img src="C:\Users\Students\Downloads\samyakbh\download (6).jpg" alt="Image 12">
+        <img src="C:\Users\Students\Downloads\samyakbh\download (7).jpg" alt="Image 13">
+        <img src="C:\Users\Students\Downloads\samyakbh\download (8).jpg" alt="Image 14">
+        <img src="C:\Users\Students\Downloads\samyakbh\images (2).jpg" alt="Image 15">
+        <img src="C:\Users\Students\Downloads\samyakbh\images (3).jpg" alt="Image 16">
+        <img src="C:\Users\Students\Downloads\samyakbh\images (4).jpg" alt="Image 17">
+        <img src="C:\Users\Students\Downloads\samyakbh\images (5).jpg" alt="Image 18">
+        <img src="C:\Users\Students\Downloads\samyakbh\images (6).jpg" alt="Image 19">
+        <img src="C:\Users\Students\Downloads\samyakbh\images (7).jpg" alt="Image 20">
+        <img src="C:\Users\Students\Downloads\samyakbh\images (8).jpg" alt="Image 21">
+        <img src="C:\Users\Students\Downloads\samyakbh\images (9).jpg" alt="Image 22">
+        <img src="C:\Users\Students\Downloads\samyakbh\Koenigsegg-Agera-R-vs-Ford-Focus-diesel.webp" alt="Image 23">
+    </div>
+
+</body>
+</html>
