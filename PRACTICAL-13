@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 Racing - Practical 13</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body { background-color: #0a0a0a; color: #e0e0e0; }
+
+    .navbar { background-color: #0d0d0d !important; border-bottom: 2px solid #00e5ff; }
+    .navbar-brand { color: #00e5ff !important; font-weight: bold; letter-spacing: 3px; }
+    .nav-link { color: #ccc !important; }
+    .nav-link:hover { color: #00e5ff !important; }
+
+    .dropdown-menu {
+      background: #111;
+      border: 1px solid #00e5ff;
+    }
+    .dropdown-item { color: #ccc !important; }
+    .dropdown-item:hover { background: #00e5ff !important; color: #000 !important; }
+
+    .breadcrumb { background: #111; padding: 8px 16px; border-radius: 4px; }
+    .breadcrumb-item a { color: #00e5ff; text-decoration: none; }
+    .breadcrumb-item.active { color: #888; }
+    .breadcrumb-item + .breadcrumb-item::before { color: #444; }
+
+    .hero-img-wrap { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #1e3a3a; }
+    .hero-img-wrap img { width: 100%; height: 240px; object-fit: cover; filter: brightness(0.4); display: block; }
+    .hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 24px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); }
+    .hero-overlay h1 { color: #00e5ff; letter-spacing: 4px; font-size: 28px; }
+    .hero-overlay p { color: #aaa; font-size: 14px; }
+
+    .btn-cyan { background: #00e5ff; border: none; color: #000; font-weight: bold; }
+    .btn-cyan:hover { background: #00bcd4; color: #000; }
+    .btn-outline-cyan { border: 1px solid #00e5ff; color: #00e5ff; background: transparent; }
+    .btn-outline-cyan:hover { background: #00e5ff; color: #000; }
+
+    .stat-card { background: #111; border: 1px solid #1e3a3a; border-radius: 6px; padding: 16px; text-align: center; }
+    .stat-num { font-size: 26px; font-weight: bold; color: #00e5ff; }
+    .stat-label { font-size: 11px; color: #666; margin-top: 4px; }
+
+    .section-title { color: #00e5ff; letter-spacing: 2px; font-size: 15px;
+                     border-left: 3px solid #00e5ff; padding-left: 10px; margin-bottom: 16px; }
+
+    .f1-card { background: #111; border: 1px solid #1e3a3a; border-top: 2px solid #00e5ff; border-radius: 6px; overflow: hidden; }
+    .f1-card img { width: 100%; height: 140px; object-fit: cover; filter: brightness(0.65); }
+    .f1-card .card-body { padding: 12px; }
+    .f1-card .card-title { color: #00e5ff; font-size: 14px; }
+    .f1-card .card-text { color: #777; font-size: 12px; }
+
+    .form-control, .form-select {
+      background: #0a0a0a !important;
+      border: 1px solid #1e3a3a !important;
+      color: #e0e0e0 !important;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: #00e5ff !important;
+      box-shadow: none !important;
+    }
+    .form-label { color: #888; font-size: 13px; }
+
+    .form-section { background: #111; border: 1px solid #1e3a3a; border-radius: 8px; }
+
+    .modal-content { background: #111; border: 2px solid #00e5ff; }
+    .modal-header { border-bottom: 1px solid #1e3a3a; }
+    .modal-footer { border-top: 1px solid #1e3a3a; }
+    .modal-title { color: #00e5ff; letter-spacing: 2px; }
+
+    footer { background: #060606; border-top: 2px solid #00e5ff; }
+    footer span { color: #00e5ff; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar with Dropdown -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">F1 RACING</a>
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            style="border-color:#00e5ff">
+      <span class="navbar-toggler-icon" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(155deg)"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Drivers</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Teams</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Red Bull</a></li>
+            <li><a class="dropdown-item" href="#">Ferrari</a></li>
+            <li><a class="dropdown-item" href="#">Mercedes</a></li>
+            <li><a class="dropdown-item" href="#">McLaren</a></li>
+            <li><a class="dropdown-item" href="#">Alpine</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-3">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Teams</a></li>
+      <li class="breadcrumb-item active">Red Bull Racing</li>
+    </ol>
+  </nav>
+
+  <!-- Hero with Image -->
+  <div class="hero-img-wrap mt-2">
+    <img src="https://images.unsplash.com/photo-1541773367-8945aea8736e?w=1200&q=80" alt="F1 Race"/>
+    <div class="hero-overlay">
+      <h1>RED BULL RACING</h1>
+      <p>Dominating the track since 2005 — Experience the thrill of Formula 1.</p>
+      <button class="btn btn-cyan mt-2"
+              data-bs-toggle="modal" data-bs-target="#statsModal">
+        View Championship Stats
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="statsModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">CHAMPIONSHIP STATS</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color:#aaa; font-size:14px;">
+          Red Bull Racing has won 6 Constructors Championships and 4 consecutive
+          Drivers titles with Max Verstappen. With 119+ race victories, they are
+          the most dominant team in modern F1 history.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-cyan" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stat Cards -->
+  <div class="row g-3 mt-2">
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Constructors Titles</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-num">119</div><div class="stat-label">Race Wins</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Verstappen Titles</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-num">21</div><div class="stat-label">2024 Races</div></div></div>
+  </div>
+
+  <!-- Driver Cards with Images -->
+  <div class="mt-4">
+    <div class="section-title">DRIVERS</div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="f1-card">
+          <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&q=80" alt="Driver 1"/>
+          <div class="card-body">
+            <h5 class="card-title">Max Verstappen</h5>
+            <p class="card-text">Driver #1 &bull; 4x World Champion &bull; Netherlands</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="f1-card">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=600&q=80" alt="Driver 2"/>
+          <div class="card-body">
+            <h5 class="card-title">Sergio Perez</h5>
+            <p class="card-text">Driver #11 &bull; Mexico &bull; 35+ Race Wins</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="f1-card">
+          <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=600&q=80" alt="RB20"/>
+          <div class="card-body">
+            <h5 class="card-title">RB20 Car</h5>
+            <p class="card-text">850+ BHP &bull; 0-100 in 2.6s &bull; 350 km/h top speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Race Cards with Images -->
+  <div class="mt-4">
+    <div class="section-title">UPCOMING RACES</div>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="f1-card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Monaco"/>
+          <div class="card-body">
+            <h5 class="card-title">Monaco Grand Prix</h5>
+            <p class="card-text">Circuit de Monaco &bull; May 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="f1-card">
+          <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600&q=80" alt="British GP"/>
+          <div class="card-body">
+            <h5 class="card-title">British Grand Prix</h5>
+            <p class="card-text">Silverstone Circuit &bull; July 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="f1-card">
+          <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=600&q=80" alt="Japan GP"/>
+          <div class="card-body">
+            <h5 class="card-title">Japanese Grand Prix</h5>
+            <p class="card-text">Suzuka Circuit &bull; April 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Form -->
+  <div class="form-section p-4 mt-4">
+    <div class="section-title">REGISTER FOR PIT LANE ACCESS</div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" placeholder="Enter your name"/>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="Enter your email"/>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Favourite Team</label>
+        <select class="form-select">
+          <option>Red Bull Racing</option>
+          <option>Ferrari</option>
+          <option>Mercedes</option>
+          <option>McLaren</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Phone</label>
+        <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX"/>
+      </div>
+      <div class="col-12">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" rows="3" placeholder="Your message..."></textarea>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-cyan">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-3 mt-5">
+  <p style="color:#444; margin:0;">&copy; 2024 <span>F1 Racing</span> — Built with Bootstrap | Web Designing Lab Practical 13</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
