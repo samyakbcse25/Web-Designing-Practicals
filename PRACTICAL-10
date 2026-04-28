@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical 10 - iFrame Demo</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  background-color: #cce5ff;
+  padding: 10px;
+}
+
+h2 {
+  color: #555;
+  margin-top: 30px;
+}
+
+.iframe-container {
+  text-align: center;
+  margin: 20px auto;
+  background-color: white;
+  padding: 15px;
+  border: 2px solid #aaa;
+  width: 80%;
+}
+
+iframe {
+  border: 2px solid #007bff;
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+  </style>
+</head>
+<body>
+
+  <h1>Practical 10 - HTML iFrame Demo</h1>
+
+  <!-- Section 1: Embedding External Page -->
+  <h2>1. Embedding External Page</h2>
+  <div class="iframe-container">
+    <p>Website embedded using iframe:</p>
+    <iframe
+      src="https://www.wikipedia.org"
+      width="700"
+      height="300"
+      title="Wikipedia Homepage"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Section 2: Embedding Google Map -->
+  <h2>2. Embedding Google Map</h2>
+  <div class="iframe-container">
+    <p>Google Map of Nagpur embedded below:</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.902!2d79.0882!3d21.1458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37cf1f0780!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1680000000000"
+      width="700"
+      height="350"
+      title="Google Map of Nagpur"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+
+</body>
+</html>
