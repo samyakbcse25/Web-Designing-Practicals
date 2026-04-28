@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 12 - Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #0a1628;
+            color: white;
+        }
+        /* AFTER */
+.card {
+    background-color: #0a1628;
+    border-color: white;
+    color: white;
+}
+        .carousel-item img {
+            border: 3px solid white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="https://www.rolex.com" target="_blank" style="color: #a37e2c; font-size: 22px;">ROLEX</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="https://www.rolex.com/watches.html" target="_blank">Watches</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.rolex.com/new-rolex.html" target="_blank">New Rolex</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Collections</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="https://www.rolex.com/watches/submariner.html" target="_blank">Submariner</a></li>
+                        <li><a class="dropdown-item" href="https://www.rolex.com/watches/datejust.html" target="_blank">Datejust</a></li>
+                        <li><a class="dropdown-item" href="https://www.rolex.com/watches/daytona.html" target="_blank">Daytona</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="" target="_blank">Find a Dealer</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://imgs.search.brave.com/0t4zOZUfV4WP-yv2zfsy4liMNkOKZPlPh6FHeSSa8ic/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9yb2xl/eC13cmlzdHdhdGNo/LWt1YWxhLWx1bXB1/ci1tYWxheXNpYS1q/dW5lLWNsb3NlLXVw/LXBpY3R1cmUtZGVl/cHNlYS0zMDY1Nzc0/MS5qcGc" style="display:block; margin:auto;" alt="slide1">
+            <div class="carousel-caption">
+                <h3>ROLEX</h3>
+                <p>Close up picture of ROLEX DEEPSEA wristwatch</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://imgs.search.brave.com/UZQLp-hhyj0ekRII8ndx1j8t535SJA9FPeLpmV0o7uI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG40/LmV0aG9zd2F0Y2hl/cy5jb20vdGhlLXdh/dGNoLWd1aWRlL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE3LzEx/L3JvbGV4LXdhdGNo/LXBhcnRzLWJyYW5k/LWVsZW1lbnRzLXBv/cHVsYXItMy5qcGc" style="display:block; margin:auto;" alt="slide2">
+            <div class="carousel-caption">
+                <h3>METAL STARPS</h3>
+                <p>WITH 24K GOLD IMPORTED FROM DUBAI</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+           <img src="https://imgs.search.brave.com/dds6X2HpL3FS6SzocFIgo0w_7snYhNvqgoEu7NMTgeg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/c3dpc3N3YXRjaGV4/cG8uY29tL3RoZXdh/dGNoY2x1Yi93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMy8wMS9G/WTdaTVAwV1lBQTBJ/Y2ctMTA4MHg5MDAu/anBlZw" style="display:block; margin:auto;" alt="slide3">
+            <div class="carousel-caption">
+                <h3>PREMIUM DIAL</h3>
+                <p>WITH GRINDED DIAMONS FROM INDIA</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- Cards using Grid System -->
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://imgs.search.brave.com/1J5oAqvMs7WD2hA0Kx_j2y9k-8C9YZnUlsL1xZmDU9c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YXRj/aG15ZGlhbW9uZHMu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI1LzAyL3JvbGV4/X3N1Ym1hcmluZXJf/aGlzdG9yeS5qcGc" class="card-img-top" alt="Submariner">
+        <div class="card-body">
+          <h5 class="card-title">Rolex Submariner</h5>
+          <p class="card-text">A classic dive watch with a unidirectional rotatable bezel and waterproof up to 300 metres.</p>
+          <a href="https://www.rolex.com/watches/submariner.html" class="btn btn-light text-dark" target="_blank">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://imgs.search.brave.com/9_8Nh0IWjZMNl6t4wbeoOEnFZzyqK-8YMfF4z8YWrBs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Ym9ic3dhdGNoZXMu/Y29tL3JvbGV4LWJs/b2cvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjAvMDkvUm9sZXhf/RGF0ZWp1c3RfMTYw/MV8yMEpNOTU2OC1F/ZGl0LTMtMi5qcGc" class="card-img-top" alt="Datejust">
+        <div class="card-body">
+          <h5 class="card-title">Rolex Datejust</h5>
+          <p class="card-text">Classic dress watch with date display and everose gold finish for timeless elegance.</p>
+          <a href="https://www.rolex.com/watches/datejust.html" class="btn btn-light text-dark" target="_blank">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://imgs.search.brave.com/6AZ7PdpYPNUJ3maRYjz5nTG2J5AkF7nJzz2i9ySYcmQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNDU0/ODA1MDQxL3Bob3Rv/L2Etc2FsZXNwZXJz/b24tZGlzcGxheXMt/dGhlLXJvbGV4LWdy/b3VwLWRheXRvbmEt/NTB0aC1hbm5pdmVy/c2FyeS13YXRjaC1m/b3ItYS1waG90b2dy/YXBoLWF0LXRoZS5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/RDBuaU1DcDNPNHF4/WVBpeEI5eE9qdkg2/Q2RPekU2cTNjSVVy/UFUzR2t5MD0" class="card-img-top" alt="Daytona">
+        <div class="card-body">
+          <h5 class="card-title">Rolex Daytona</h5>
+          <p class="card-text">Racing chronograph with tachymetre bezel, built for speed and legendary performance.</p>
+          <a href="https://www.rolex.com/watches/daytona.html" class="btn btn-light text-dark" target="_blank">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Buttons -->
+<div class="container mt-3 mb-4">
+  <h2 class="text-center mb-3">Explore Rolex</h2>
+  <div class="text-center">
+    <a href="https://www.rolex.com/watches.html" target="_blank" class="btn btn-light text-dark m-1 rounded-pill">Our Watches</a>
+    <a href="https://www.rolex.com/rolex-dealers.html" target="_blank" class="btn btn-light text-dark m-1 rounded-pill">Find a Dealer</a>
+    <a href="https://www.rolex.com/world-of-rolex.html" target="_blank" class="btn btn-light text-dark m-1 rounded-pill">World of Rolex</a>
+    <a href="https://www.rolex.com/rolex-owners/servicing-your-rolex.html" target="_blank" class="btn btn-light text-dark m-1 rounded-pill">Service & Repair</a>
+    <a href="https://www.rolex.com/new-rolex.html" target="_blank" class="btn btn-light text-dark m-1 rounded-pill">New Arrivals</a>
+    <a href="https://www.rolex.com/contact.html" target="_blank" class="btn btn-light text-dark m-1 rounded-pill">Contact Us</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
