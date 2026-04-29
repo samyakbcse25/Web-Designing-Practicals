@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Designing Practicals — Samyak Bhadke</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      border-bottom: 2px solid #4ade80;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #4ade80;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #888;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .badge-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(74,222,128,0.1);
+      border: 1px solid rgba(74,222,128,0.3);
+      color: #4ade80;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-top: 3px solid #4ade80;
+      border-radius: 10px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(74,222,128,0.15);
+      border-top-color: #86efac;
+    }
+
+    .card-num {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #4ade80;
+      margin-bottom: 8px;
+      font-family: monospace;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #f0f0f0;
+      margin-bottom: 6px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .card-arrow {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #4ade80;
+      font-family: monospace;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid #222;
+      color: #444;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Web Designing Practicals</h1>
+  <p>S.B. Jain Institute of Technology, Management & Research — Nagpur</p>
+  <div class="badge-row">
+    <span class="badge">Samyak Bhadke</span>
+    <span class="badge">CS25041</span>
+    <span class="badge">N-VSCCS102P</span>
+  </div>
+</header>
+
+<div class="container">
+  <div class="grid">
+
+    <a class="card" href="practical01.html" target="_blank">
+      <div class="card-num">PRACTICAL 01</div>
+      <div class="card-title">Basic HTML Page</div>
+      <div class="card-desc">Create Account page — headings, basic HTML structure, bgcolor.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical02.html" target="_blank">
+      <div class="card-num">PRACTICAL 02</div>
+      <div class="card-title">Text Formatting</div>
+      <div class="card-desc">Bold, italic, underline, HR tag, paragraph alignment and text elements.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical03.html" target="_blank">
+      <div class="card-num">PRACTICAL 03</div>
+      <div class="card-title">Lists & Links</div>
+      <div class="card-desc">Ordered list, unordered list, definition list, anchor tag, image tag.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical04.html" target="_blank">
+      <div class="card-num">PRACTICAL 04</div>
+      <div class="card-title">HTML Tables</div>
+      <div class="card-desc">Class timetable using HTML table with thead, tbody, colspan, cellpadding.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical05.html" target="_blank">
+      <div class="card-num">PRACTICAL 05</div>
+      <div class="card-title">Resume Page</div>
+      <div class="card-desc">Personal resume with academic details, skills table, and personal info.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical06.html" target="_blank">
+      <div class="card-num">PRACTICAL 06</div>
+      <div class="card-title">PAN Registration Form</div>
+      <div class="card-desc">HTML form with fieldsets, select dropdowns, radio buttons, checkbox, date input.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical07.html" target="_blank">
+      <div class="card-num">PRACTICAL 07</div>
+      <div class="card-title">Tribute Page (CSS)</div>
+      <div class="card-desc">Tribute to Chhatrapati Shivaji Maharaj using internal CSS — nav, div, styling.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical08.html" target="_blank">
+      <div class="card-num">PRACTICAL 08</div>
+      <div class="card-title">Image Gallery (External CSS)</div>
+      <div class="card-desc">Flexbox gallery with hover effects using external stylesheet.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical09.html" target="_blank">
+      <div class="card-num">PRACTICAL 09</div>
+      <div class="card-title">Font Awesome & Google Fonts</div>
+      <div class="card-desc">Webpage with Poppins font, FontAwesome icons, animated boxes, header.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical10.html" target="_blank">
+      <div class="card-num">PRACTICAL 10</div>
+      <div class="card-title">iFrame Demo</div>
+      <div class="card-desc">Embedding external webpage (Wikipedia) and Google Map of Nagpur using iframe.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical11.html" target="_blank">
+      <div class="card-num">PRACTICAL 11</div>
+      <div class="card-title">HTML5 APIs</div>
+      <div class="card-desc">Drag & Drop API, Geolocation API, and Web Storage API demonstrations.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical12.html" target="_blank">
+      <div class="card-num">PRACTICAL 12</div>
+      <div class="card-title">Bootstrap — Rolex Page</div>
+      <div class="card-desc">Bootstrap navbar, carousel, cards grid, and buttons. Rolex theme.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+    <a class="card" href="practical13.html" target="_blank">
+      <div class="card-num">PRACTICAL 13</div>
+      <div class="card-title">Bootstrap — F1 Racing</div>
+      <div class="card-desc">Advanced Bootstrap — modal, breadcrumb, stat cards, form, dropdown, F1 theme.</div>
+      <div class="card-arrow">→ Open</div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  Web Designing Lab (N-VSCCS102P) &nbsp;·&nbsp; S.B. Jain Institute of Technology &nbsp;·&nbsp; Samyak Bhadke · CS25041
+</footer>
+
+</body>
+</html>
